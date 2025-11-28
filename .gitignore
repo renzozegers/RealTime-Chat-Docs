@@ -1,0 +1,32 @@
+# Source code
+*.js
+*.json
+*.log
+*.bat
+*.sh
+server.js
+cluster-server.js
+ensure-schema.js
+inspect-schema.js
+fetch-admin-token.js
+
+# Directories
+node_modules/
+handlers/
+security/
+utils/
+config/
+database/
+deployment/
+scripts/
+tests/
+migrations/
+
+# Documentation files we want to keep
+!docs/**/*.md
+!diagrams/**/*.md
+!README.md
+!LICENSE
+!DOCUMENTATION_SUMMARY.md
+!REPOSITORY_STRUCTURE_FINAL.md
+
