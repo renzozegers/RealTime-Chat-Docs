@@ -150,25 +150,30 @@ See [API Reference](./docs/API_REFERENCE.md) for complete message types and HTTP
 
 ### Architecture and Design
 - [System Architecture](./docs/ARCHITECTURE.md): Detailed system design and components
-- [Message Delivery Pipeline](./docs/DELIVERY_PIPELINE.md): How messages flow through the system
-- [Reconnection Handling](./docs/RECONNECTION.md): Offline delivery and reconnection logic
-- [Caching Strategy](./docs/CACHING.md): Redis and in-memory caching
+- [System Design](./docs/SYSTEM_DESIGN.md): Complete architecture and design overview
+- [Message Flow](./docs/ARCHITECTURE.md#message-flow): How messages flow through the system (see Architecture doc)
+- [Reconnection Handling](./docs/IMPLEMENTATION_DETAILS.md#reconnection-logic-and-backoff): Offline delivery and reconnection logic (see Implementation Details)
+- [Caching Strategy](./docs/SYSTEM_DESIGN.md#performance-optimizations): Redis and in-memory caching (see System Design)
 - [Scaling Guide](./docs/SCALING.md): Horizontal scaling and cluster setup
-- [Database Optimization](./docs/DB_OPTIMIZATION.md): SQL optimizations and schema design
+- [Database Schema](./docs/DATABASE_SCHEMA.md): Complete database schema with indexes and query optimization
 
 ### Performance and Reliability
-- [Concurrency and Event Loop](./docs/CONCURRENCY_EVENT_LOOP.md): Node.js event loop, blocking operations, high load behavior
+- [Systems Thinking & Scalability](./docs/SYSTEMS_THINKING_SCALABILITY.md): Complete guide to concurrency, scalability, reliability, and monitoring
+- [Concurrency and Event Loop](./docs/SYSTEMS_THINKING_SCALABILITY.md#event-loop--backpressure): Node.js event loop, blocking operations, high load behavior
 - [Fault Tolerance](./docs/FAULT_TOLERANCE.md): Crash handling, partial failures, retry mechanisms, message guarantees
-- [Performance Monitoring](./docs/PERFORMANCE_MONITORING.md): Latency measurement, event loop monitoring, profiling tools
-- [Quantitative Analysis](./docs/QUANTITATIVE_ANALYSIS.md): Throughput calculations, traffic spike handling, tail latency, ultra-low latency optimizations
+- [Performance Monitoring](./docs/SYSTEMS_THINKING_SCALABILITY.md#monitoring--alerting): Latency measurement, event loop monitoring, profiling tools
+- [Performance Characteristics](./docs/SYSTEM_DESIGN.md#performance-characteristics): Throughput calculations, latency analysis, performance optimizations
 
 ### API and Integration
 - [API Reference](./docs/API_REFERENCE.md): Complete WebSocket and HTTP API documentation
-- [Sequence Diagrams](./docs/SEQUENCE_DIAGRAMS.md): Detailed interaction flows
+- [Sequence Diagrams](./diagrams/): Detailed interaction flows (see diagrams folder)
+  - [Message Delivery Flow](./diagrams/message-delivery-flow.md)
+  - [Reconnection Flow](./diagrams/reconnection-flow.md)
+  - [System Architecture](./diagrams/system-architecture.md)
 
-### Development
-- [Testing Strategy](./docs/TESTING_STRATEGY.md): Testing approach and test suite
-- [Project Learnings](./docs/PROJECT_LEARNINGS.md): Hardest bugs, networking insights, future improvements, retrospective
+### Implementation Details
+- [Implementation Details](./docs/IMPLEMENTATION_DETAILS.md): Security, connection lifecycle, and configuration
+- [Database Schema](./docs/DATABASE_SCHEMA.md): Complete database schema with relationships and indexes
 
 ### Diagrams
 - [System Architecture](./diagrams/system-architecture.md): High-level architecture diagram
@@ -184,26 +189,21 @@ chat-server/
 ├── README.md                 # This file - architecture overview
 ├── LICENSE                   # MIT License
 │
-├── diagrams/                 # Architecture diagrams (Mermaid)
+├── diagrams/                  # Architecture diagrams (Mermaid)
 │   ├── system-architecture.md
 │   ├── message-delivery-flow.md
 │   └── reconnection-flow.md
 │
 └── docs/                     # Complete technical documentation
     ├── ARCHITECTURE.md       # Detailed system architecture
-    ├── DELIVERY_PIPELINE.md  # Message delivery pipeline
-    ├── RECONNECTION.md       # Reconnection and offline sync
-    ├── CACHING.md            # Caching strategy
-    ├── SCALING.md            # Scaling guide
-    ├── DB_OPTIMIZATION.md    # Database optimizations
-    ├── API_REFERENCE.md      # Complete API reference
-    ├── SEQUENCE_DIAGRAMS.md  # Sequence diagrams
-    ├── TESTING_STRATEGY.md   # Testing strategy
-    │
-    └── (SQL schema files excluded - NDA compliance)
+    ├── SYSTEM_DESIGN.md      # Complete architecture and design overview
+    ├── API_REFERENCE.md      # Complete WebSocket and HTTP API reference
+    ├── DATABASE_SCHEMA.md    # Database schema with indexes and relationships
+    ├── IMPLEMENTATION_DETAILS.md  # Security, connection lifecycle, configuration
+    ├── SCALING.md            # Scaling guide and cluster setup
+    ├── FAULT_TOLERANCE.md    # Fault tolerance and error handling
+    └── SYSTEMS_THINKING_SCALABILITY.md  # Complete scalability and systems thinking guide
 ```
-
-See [Repository Structure](./docs/REPOSITORY_STRUCTURE.md) for detailed file organization.
 
 ## License
 
